@@ -1,0 +1,114 @@
+🏹 Battle Arena – OOP in Action (Java)
+Overview
+
+Welcome to Battle Arena — a Java console project designed to demonstrate the four pillars of Object-Oriented Programming (OOP):
+
+Encapsulation – Character attributes like health and power are private and accessed through getters/setters.
+
+Inheritance – Thor and Doctor Strange inherit from the abstract Character class.
+
+Polymorphism – The attack() and defend() methods behave differently for each hero.
+
+Abstraction – Character defines abstract actions (attack & defend) that each subclass implements.
+
+This project turns theory into action, allowing you to visualize OOP concepts through a turn-based battle between Thor ⚡ and Doctor Strange 🌀.
+
+Features
+
+Turn-based battle simulation in console.
+
+Health tracking with clear output after each attack.
+
+Unique attack and defense logic for each character.
+
+Demonstrates encapsulation, inheritance, polymorphism, and abstraction in a fun, interactive way.
+
+Characters
+Character	Health	Power	Special Feature
+Thor ⚡	100	40	Blocks 10 damage with Mjolnir
+Doctor Strange 🌀	100	35	Magical shield reduces damage by 5
+How to Run
+
+Clone this repository:
+
+git clone <your-repo-link>
+
+
+Navigate to the project folder:
+
+cd BattleArena
+
+
+Compile the Java files:
+
+javac game.java
+
+
+Run the project:
+
+java com.OOPSPillars.game
+
+
+You will see a turn-based battle in the console with health updates after each attack.
+
+Example Output
+Welcome to the Battle between Thor ⚡ VS Doctor Strange 🌀
+
+Thor ⚡ attacks Doctor Strange 🌀!
+Doctor Strange 🌀 defends with a magical shield! Health now: 95
+
+Doctor Strange 🌀 casts a spell on Thor ⚡!
+Thor ⚡ blocks part of the attack! Health now: 95
+
+---------------------------------------------------------------
+...
+Thor ⚡ wins with Battle ⚡
+=== Game Over ===
+
+UML Diagram
+            ┌───────────────────────────┐
+            │       Character           │  <<abstract>>
+            ├───────────────────────────┤
+            │ - name: String            │
+            │ - health: int             │
+            │ - power: int              │
+            ├───────────────────────────┤
+            │ + getName(): String       │
+            │ + getHealth(): int        │
+            │ + getPower(): int         │
+            │ + setHealth(int): void    │
+            │ + isAlive(): boolean      │
+            │ + attack(enemy: Character): void <<abstract>>
+            │ + defend(damage: int): void <<abstract>>
+            └───────────────┬───────────┘
+                            │
+           ┌────────────────┴─────────────┐
+           │                              │
+┌─────────────────────┐        ┌─────────────────────────┐
+│        Thor          │        │   DoctorStrange        │
+├─────────────────────┤        ├─────────────────────────┤
+│ + attack(enemy)     │        │ + attack(enemy)         │
+│ + defend(damage)    │        │ + defend(damage)        │
+└─────────────────────┘        └─────────────────────────┘
+
+Learning Outcomes
+
+Understand how encapsulation protects object data.
+
+Learn inheritance to reuse code and define hierarchies.
+
+Apply polymorphism to implement different behaviors dynamically.
+
+Use abstraction to focus on what objects can do rather than how.
+
+References
+
+GitHub code: https://github.com/Dileep-kumarc/java-topics-.git
+
+
+
+License
+
+MIT License © 2025 – Dilip Kumar C
+
+If you want, I can also make a shorter, GitHub-ready “fun version” with emojis, color-coded console outputs, and health bars — perfect for showing off your project visually.
