@@ -31,12 +31,12 @@ How to Run
 
 Clone this repository:
 
-git clone <your-repo-link>
+git clone https://github.com/Dileep-kumarc/java-topics-.git
 
 
 Navigate to the project folder:
 
-cd BattleArena
+cd BattleArena/game
 
 
 Compile the Java files:
@@ -46,7 +46,7 @@ javac game.java
 
 Run the project:
 
-java com.OOPSPillars.game
+java game
 
 
 You will see a turn-based battle in the console with health updates after each attack.
