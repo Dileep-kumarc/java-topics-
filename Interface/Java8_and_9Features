@@ -1,0 +1,103 @@
+
+package com.intefaces;
+
+interface Operating_System{
+	void boot();
+	void shutdown();
+	
+	static void checkComptablte() {// JDK 8 feature 
+		redudent();
+	}
+	
+	//private is given to restrict the acess and static is given static 
+	//method can't acess so give static
+	
+	  private static  void redudent() {//JDK 9
+			System.out.println("Checking internet connection..");
+			System.out.println("Check the system comptablity ");
+		
+	 }
+	
+	
+	default void installApplection(){ //JDK 8 feature and to make backward comptablity
+	redudent();
+		System.out.println("Checking install appliction....");
+	}
+}
+
+class Windows implements Operating_System{
+
+	@Override
+	public void boot() {
+		System.out.println("Windows is booting..........");
+		
+	}
+
+	@Override
+	public void shutdown() {
+		System.out.println("Windows is shutdown..........");
+	}
+	
+	
+}
+
+
+class Mac implements Operating_System{
+
+	@Override
+	public void boot() {
+		System.out.println("Mac is booting..........");
+		
+	}
+
+	@Override
+	public void shutdown() {
+		System.out.println("Mac is shutdown..........");
+	}
+	
+	
+}
+
+class Linux implements Operating_System{
+
+	@Override
+	public void boot() {
+		System.out.println("Linux is booting..........");
+		
+	}
+
+	@Override
+	public void shutdown() {
+		System.out.println("Linux is shutdown..........");
+	}
+	
+	
+}
+public class Java8_and_9Features {
+
+	
+	public static void main(String[] args) {
+		Operating_System.checkComptablte();
+		Operating_System wi=new Windows();
+		Operating_System mac=new Mac();
+		Operating_System li=new Linux();
+		
+		
+		System.out.println();
+		
+		wi.boot();
+		wi.installApplection();
+		wi.shutdown();
+		System.out.println();
+		
+		mac.boot();
+		//mac.redudent();// to restrict the access we should make method private
+		mac.shutdown();
+		System.out.println();
+		
+		li.boot();
+		li.shutdown();
+		
+	}
+
+}
