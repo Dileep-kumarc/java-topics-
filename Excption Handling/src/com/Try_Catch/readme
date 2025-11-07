@@ -1,0 +1,100 @@
+# 🚗 RTO Driving License Application System (Exception Handling in Java)
+
+This project demonstrates **Exception Handling** in Java using a practical example of an
+RTO Driving License Application System.  
+The program validates an applicant's age, documents, vehicle type, test scores, and fee payment.  
+Invalid data triggers custom exceptions, and the user gets up to **three attempts** before the application is rejected.
+
+---
+
+## ✅ Features
+- ✅ Custom Exceptions
+  - `InvalidAgeException`
+  - `InvalidDocumentException`
+  - `InvalidVehicleTypeException`
+  - `IncompleteFeeException`
+  - `FailedTestException`
+- ✅ `try-catch` with multiple attempts (max 3)
+- ✅ `super(message)` used to store error messages in exception object
+- ✅ Clear error output to user
+- ✅ Scanner input for user details
+
+---
+
+## 🧪 Validations Performed
+
+| Validation | Condition | Exception Thrown |
+|------------|-----------|------------------|
+| Age | `< 18` or `> 60` | `InvalidAgeException` |
+| Aadhaar | `false` | `InvalidDocumentException` |
+| Vehicle Type | Not `"Two Wheeler"` or `"Four Wheeler"` | `InvalidVehicleTypeException` |
+| Fees | `Two Wheeler < 500`, `Four Wheeler < 1000` | `IncompleteFeeException` |
+| Written Test | `< 60` | `FailedTestException` |
+| Driving Test | `< 70` | `FailedTestException` |
+
+---
+
+## ✅ Sample Output
+
+Enter your name:
+Rahul
+Enter your age:
+16
+...
+Invalid Age: Age must be between 18 and 60.
+2nd attempt
+
+
+If all validations pass:
+
+
+✅ License Approved
+
+
+After 3 failures:
+
+
+❌ Application Rejected
+
+
+---
+
+## 📂 Project Structure
+
+
+
+src/
+└── com.Try_Catch
+├── InvalidAgeException.java
+├── InvalidDocumentException.java
+├── InvalidVehicleTypeException.java
+├── FailedTestException.java
+├── IncompleteFeeException.java
+├── Applicant.java
+├── RTO.java
+└── RTO_Driving_License_Application_System.java
+
+
+---
+
+## ✅ Concepts Practiced
+- Custom Exception classes
+- Throwing and catching exceptions
+- Multi-level try–catch
+- Using `super(message)` to store exception messages
+- User input validation
+
+---
+
+## 🚀 How to Run
+
+1. Clone repository:
+   ```bash
+   git clone https://github.com/your-username/repository-name
+
+
+Open project in any Java IDE (VS Code, IntelliJ, Eclipse)
+
+Run:
+
+RTO_Driving_License_Application_System.java
